@@ -448,7 +448,7 @@ $app_list_strings = array(
         'Leave of Absence' => '休職',
     ),
     'messenger_type_dom' => array(
-        '' => '',
+        '' => '--メッセンジャー種別--',
         'MSN' => 'MSN',
         'Yahoo!' => 'Yahoo!',
         'AOL' => 'AOL',
