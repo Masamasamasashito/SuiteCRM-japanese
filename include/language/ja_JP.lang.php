@@ -436,14 +436,14 @@ $app_list_strings = array(
         'Administrator' => 'システム管理者',
     ),
     'user_status_dom' => array(
-        'Active' => '稼働中',
-        'Inactive' => '非稼働中',
+        'Active' => 'アクティブ',
+        'Inactive' => '非アクティブ',
     ),
     'user_factor_auth_interface_dom' => array(
         'FactorAuthEmailCode' => 'メールコード',
     ),
     'employee_status_dom' => array(
-        'Active' => '稼働中',
+        'Active' => '在職中',
         'Terminated' => '退職',
         'Leave of Absence' => '休職',
     ),
