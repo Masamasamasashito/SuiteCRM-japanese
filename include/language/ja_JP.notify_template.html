@@ -1,0 +1,332 @@
+<!--
+/**
+ *
+ * SugarCRM Community Edition is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
+ *
+ * SuiteCRM is an extension to SugarCRM Community Edition developed by SalesAgility Ltd.
+ * Copyright (C) 2011 - 2018 SalesAgility Ltd.
+ *
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ *
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ *
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU Affero General Public License version 3.
+ *
+ * In accordance with Section 7(b) of the GNU Affero General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo and "Supercharged by SuiteCRM" logo. If the display of the logos is not
+ * reasonably feasible for technical reasons, the Appropriate Legal Notices must
+ * display the words "Powered by SugarCRM" and "Supercharged by SuiteCRM".
+ */
+-->
+<!-- BEGIN: Quote_Subject -->
+<p>SuiteCRM 見積 - {QUOTE_SUBJECT}</p>
+<!-- END: Quote_Subject -->
+<!-- BEGIN: Quote -->
+<p><b>{ASSIGNER}</b> は <b>{ASSIGNED_USER}</b> の見積を割り当てられました。.</p>
+<p>
+件名: {QUOTE_SUBJECT} <br />
+状態: {QUOTE_STATUS} <br />
+成約予想日: {QUOTE_CLOSEDATE} <br />
+説明: {QUOTE_DESCRIPTION}
+</p>
+<p><a href={URL}>この見積を確認</a> できます。.</p>
+<!-- END: Quote -->
+
+<!-- BEGIN: Account_Subject -->
+<p>SuiteCRM 顧客 - {ACCOUNT_NAME}</p>
+<!-- END: Account_Subject -->
+<!-- BEGIN: Account -->
+<p><b>{ASSIGNER}</b> は <b>{ASSIGNED_USER}</b> の顧客を割り当てられました。.</p>
+<p>
+名前: {ACCOUNT_NAME} <br />
+種類: {ACCOUNT_TYPE} <br />
+説明: {ACCOUNT_DESCRIPTION}
+</p>
+<p><a href={URL}>この顧客を確認</a> できます。.</p>
+<!-- END: Account -->
+
+<!-- BEGIN: Case_Subject -->
+<p>SuiteCRM ケース - {CASE_SUBJECT}</p>
+<!-- END: Case_Subject -->
+<!-- BEGIN: Case -->
+<p><b>{ASSIGNER}</b> は <b>{ASSIGNED_USER}</b> のケースを割り当てられました。.</p>
+<p>
+件名: {CASE_SUBJECT} <br />
+優先順位: {CASE_PRIORITY} <br />
+状態: {CASE_STATUS} <br />
+説明: {CASE_DESCRIPTION}
+</p>
+<p><a href={URL}>このケースを確認</a> できます。.</p>
+<!-- END: Case -->
+
+<!-- BEGIN: Task_Subject -->
+<p>SuiteCRM タスク - {TASK_SUBJECT}</p>
+<!-- END: Task_Subject -->
+<!-- BEGIN: Task -->
+<p><b>{ASSIGNER}</b> は <b>{ASSIGNED_USER}</b> のタスクを割り当てられました。.</p>
+<p>
+件名: {TASK_SUBJECT} <br />
+優先順位: {TASK_PRIORITY} <br />
+期限: {TASK_DUEDATE} <br />
+状態: {TASK_STATUS} <br />
+説明: {TASK_DESCRIPTION}
+</p>
+<p><a href={URL}>このタスクを確認</a> できます。.</p>
+<!-- END: Task -->
+
+<!-- BEGIN: Meeting_Subject -->
+<p>SuiteCRM 会議 - {MEETING_SUBJECT}</p>
+<!-- END: Meeting_Subject -->
+<!-- BEGIN: Meeting -->
+<p>To: {MEETING_TO}</p>
+<p><b>{ASSIGNER}</b> は会議に招待されました</p>
+<p>
+件名: {MEETING_SUBJECT} <br />
+場所: {MEETING_LOCATION} <br />
+開始日: {MEETING_STARTDATE} <br />
+終了日: {MEETING_ENDDATE}
+</p>
+<p>
+<!-- BEGIN: Meeting_External_API -->
+会議 URL: {MEETING_URL}
+</p>
+<!-- END: Meeting_External_API -->
+<p>説明: {MEETING_DESCRIPTION}<br />
+</p>
+<p>---</p>
+<p><a href={ACCEPT_URL}&accept_status=accept>この会議を承諾する</a>.</p>
+<p><a href={ACCEPT_URL}&accept_status=tentative>この会議を仮承諾する</a>.</p>
+<p><a href={ACCEPT_URL}&accept_status=decline>この会議を辞退する</a>.</p>
+<!-- END: Meeting -->
+
+<!-- BEGIN: MeetingSpecial_Subject -->
+<p>SuiteCRM 会議 - {MEETING_SUBJECT}</p>
+<!-- END: MeetingSpecial_Subject -->
+<!-- BEGIN: MeetingSpecial -->
+<p><b>{ASSIGNER}</b> は <b>{ASSIGNED_USER}</b> の会議を割り当てられました。.</p>
+<p>
+件名: {MEETING_SUBJECT} <br />
+場所: {MEETING_LOCATION} <br />
+状態: {MEETING_STATUS} <br />
+開始日: {MEETING_STARTDATE} <br />
+終了日: {MEETING_ENDDATE} <br />
+説明: {MEETING_DESCRIPTION}
+</p>
+<p><a href={URL}>この会議を確認</a> できます。.</p>
+<!-- END: MeetingSpecial -->
+
+<!-- BEGIN: MeetingReminder_Subject -->
+<p>会議のリマインダ - {MEETING_SUBJECT}</p>
+<!-- END: MeetingSpecial_Subject -->
+<!-- BEGIN: MeetingReminder -->
+<p>
+    タイトル: {MEETING_SUBJECT} <br />
+  時間: {MEETING_STARTDATE} <br />
+  場所: {MEETING_LOCATION} <br />
+  作成: {MEETING_CREATED_BY}
+</p>
+<!-- END: MeetingReminder -->
+
+<!-- BEGIN: Email_Subject -->
+<p>SuiteCRM メール - {EMAIL_SUBJECT}</p>
+<!-- END: Email_Subject -->
+<!-- BEGIN: Email -->
+<p><b>{ASSIGNER}</b> は <b>{ASSIGNED_USER}</b> のメールを割り当てられました。.</p>
+<p>
+件名: {EMAIL_SUBJECT} <br />
+送信日付: {EMAIL_DATESENT}
+</p>
+<p><a href={URL}>このメールを確認</a> できます。.</p>
+<!-- END: Email -->
+
+<!-- BEGIN: Contact_Subject -->
+<p>SuiteCRM 連絡先 - {CONTACT_NAME}</p>
+<!-- END: Contact_Subject -->
+<!-- BEGIN: Contact -->
+<p><b>{ASSIGNER}</b> は <b>{ASSIGNED_USER}</b> の連絡先を割り当てられました。.</p>
+<p>
+名前: {CONTACT_NAME} <br />
+説明: {CONTACT_DESCRIPTION}
+</p>
+<p><a href={URL}>この連絡先を確認</a> できます。.</p>
+<!-- END: Contact -->
+
+<!-- BEGIN: Lead_Subject -->
+<p>SuiteCRM リード - {LEAD_NAME}</p>
+<!-- END: Lead_Subject -->
+<!-- BEGIN: Lead -->
+<p><b>{ASSIGNER}</b> は <b>{ASSIGNED_USER}</b> のリードを割り当てられました。.</p>
+<p>
+名前: {LEAD_NAME} <br />
+リードのソース: {LEAD_SOURCE} <br />
+状態: {LEAD_STATUS} <br />
+説明: {LEAD_DESCRIPTION}
+</p>
+<p><a href={URL}>このリードを確認</a> できます。.</p>
+<!-- END: Lead -->
+
+<!-- BEGIN: Opportunity_Subject -->
+<p>SuiteCRM 商談 - {OPPORTUNITY_NAME}</p>
+<!-- END: Opportunity_Subject -->
+<!-- BEGIN: Opportunity -->
+<p><b>{ASSIGNER}</b> は <b>{ASSIGNED_USER}</b> の商談を割り当てられました。.</p>
+<p>
+名前: {OPPORTUNITY_NAME} <br />
+量: {OPPORTUNITY_AMOUNT} <br />
+成約予想日: {OPPORTUNITY_CLOSEDATE} <br />
+営業段階: {OPPORTUNITY_STAGE} <br />
+説明: {OPPORTUNITY_DESCRIPTION}
+</p>
+<p><a href={URL}>この商談を確認</a> できます。.</p>
+<!-- END: Opportunity -->
+
+<!-- BEGIN: Bug_Subject -->
+<p>SuiteCRM バグ - {TASK_SUBJECT}</p>
+<!-- END: Bug_Subject -->
+<!-- BEGIN: Bug -->
+<p><b>{ASSIGNER}</b> は <b>{ASSIGNED_USER}</b> のバグを割り当てられました。.</p>
+<p>
+バグ番号: {BUG_BUG_NUMBER} <br />
+件名: {BUG_SUBJECT} <br />
+種類: {BUG_TYPE} <br />
+優先順位: {BUG_PRIORITY} <br />
+状態: {BUG_STATUS} <br />
+解像度: {BUG_RESOLUTION} <br />
+リリース: {BUG_RELEASE} <br />
+説明: {BUG_DESCRIPTION} <br />
+作業ログ: {BUG_WORK_LOG}
+</p>
+<p><a href={URL}>このバグを確認</a> できます。.</p>
+<!-- END: Bug -->
+
+<!-- BEGIN: Default_Subject -->
+<p>SuiteCRM - 割り当て {OBJECT}</p>
+<!-- END: Default_Subject -->
+<!-- BEGIN: Default -->
+<p><b>{ASSIGNER}</b> は {OBJECT} を <b>{ASSIGNED_USER}</b> に割り当てました。.</p>
+<p><a href={URL}>この {OBJECT} を確認</a> できます。.</p>
+<!-- END: Default -->
+
+<!-- BEGIN: Call_Subject -->
+<p>SuiteCRM 電話 - {CALL_SUBJECT}</p>
+<!-- END: Call_Subject -->
+<!-- BEGIN: Call -->
+<p>To: {CALL_TO}</p>
+<p><b>{ASSIGNER}</b> は電話に招待されました</p>
+<p>
+件名: {CALL_SUBJECT} <br />
+状態: {CALL_STATUS} <br />
+開始日: {CALL_STARTDATE} <br />
+期間: {CALL_HOURS}h、{CALL_MINUTES}m <br />
+説明: {CALL_DESCRIPTION}<br />
+</p>
+<p>---</p>
+<p><a href={ACCEPT_URL}&accept_status=accept>この電話を承諾する</a>.</p>
+<p><a href={ACCEPT_URL}&accept_status=tentative>この電話を仮承諾する</a>.</p>
+<p><a href={ACCEPT_URL}&accept_status=decline>この電話を辞退する</a>.</p>
+<!-- END: Call -->
+
+<!-- BEGIN: CallSpecial_Subject -->
+<p>SuiteCRM 電話 - {CALL_SUBJECT}</p>
+<!-- END: CallSpecial_Subject -->
+<!-- BEGIN: CallSpecial -->
+<p><b>{ASSIGNER}</b> は <b>{ASSIGNED_USER}</b> の電話を割り当てられました。.</p>
+<p>
+件名: {CALL_SUBJECT} <br />
+状態: {CALL_STATUS} <br />
+開始日: {CALL_STARTDATE} <br />
+期間: {CALL_HOURS}h、{CALL_MINUTES}m <br />
+説明: {CALL_DESCRIPTION}
+</p>
+<p><a href={URL}>この電話を確認</a> できます。.</p>
+<!-- END: CallSpecial -->
+
+<!-- BEGIN: CallReminder_Subject -->
+<p>電話リマインダー - {CALL_SUBJECT}</p>
+<!-- END: CallReminder_Subject -->
+<!-- BEGIN: CallReminder -->
+<p>
+    タイトル: {CALL_SUBJECT} <br />
+  時間: {CALL_STARTDATE} <br />
+  作成: {CALL_CREATED_BY}
+</p>
+<!-- END: CallReminder -->
+
+<!-- BEGIN: Campaign_Subject -->
+<p>SuiteCRM キャンペーン - {CAMPAIGN_NAME}</p>
+<!-- END: Campaign_Subject -->
+<!-- BEGIN: Campaign -->
+<p><b>{ASSIGNER}</b> は、<b>{ASSIGNED_USER}</b> のキャンペーンを割り当てられました。.</p>
+<p>
+件名: {CAMPAIGN_NAME} <br />
+量: {CAMPAIGN_AMOUNT} <br />
+終了日: {CAMPAIGN_CLOSEDATE} <br />
+状態: {CAMPAIGN_STATUS} <br />
+説明: {CAMPAIGN_DESCRIPTION}
+</p>
+<p><a href={URL}>このキャンペーンを確認</a> できます。.</p>
+<!-- END: Campaign -->
+
+<!-- BEGIN: Quota_Subject -->
+<p>SuiteCRM クォータ - {QUOTA_TIMEPERIOD} に対するクォータの制限</p>
+<!-- END: Quota_Subject -->
+<!-- BEGIN: Quota -->
+<p><b>{ASSIGNER}</b> は、<b>{ASSIGNED_USER}</b> のクォータを割り当てられました。.</p>
+<p>
+金額: {QUOTA_AMOUNT} <br />
+期間: {QUOTA_TIMEPERIOD}
+</p>
+<p><a href={QUOTA_URL}>このクォータ割り当てのレビュー</a> があります。.</p>
+<!-- END: Quota -->
+
+<!-- BEGIN: KBDocument_Subject -->
+<p>SuiteCRM ドキュメント - {KBDOCUMENT_NAME}</p>
+<!-- END: KBDocument_Subject -->
+<!-- BEGIN: KBDocument -->
+{NOTIFICATION_MESSAGE}
+
+<p>
+名前: {KBDOCUMENT_NAME} <br />
+作成日: {KBDOCUMENT_DATE_CREATED} <br />
+作成: {KBDOCUMENT_CREATED_BY} <br />
+状態: {KBDOCUMENT_STATUS} <br />
+説明: {KBDOCUMENT_DESCRIPTION}
+</p>
+<p><a href={URL}>このドキュメントを確認</a> できます。.</p>
+<!-- END: KBDocument -->
+
+<!-- BEGIN: Contract_Subject -->
+<p>SuiteCRM 契約 - {CONTRACT_NAME}</p>
+<!-- END: Contract_Subject -->
+<!-- BEGIN: Contract-->
+<p><b>{ASSIGNER}</b> は <b>{ASSIGNED_USER}</b> の契約を割り当てられました。.</p>
+<p><a href={URL}>この契約を確認</a> できます。.</p>
+<!-- END:Contract-->
+
+<!-- BEGIN: ContractSpecial_Subject -->
+<p>SuiteCRM 契約 - {CONTRACT_NAME}</p>
+<!-- END: ContractSpecial_Subject -->
+<!-- BEGIN: ContractSpecial -->
+<p>あなたの契約: {CONTRACT_NAME} は {CONTRACT_END_DATE} の日付で期限切れです。</p>
+<p><a href={URL}>この契約を確認</a> できます。.</p>
+<!-- END:ContractSpecial-->
